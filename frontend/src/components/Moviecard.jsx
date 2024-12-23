@@ -1,8 +1,19 @@
 import "../css/Moviecard.css";
+import { useMovieContext } from "../context/MovieContext";
 
 function Moviecard({ movie }) {
-  function onFavClick() {
-    alert("Added to favorites");
+  const { addToFavorites, isFavorite, removeFromFavorites } = useMovieContext();
+  const favorite = isFavorite(movie.id);
+
+  function onFavClick(e) {
+    e.preventDefault();
+    if (favorite) removeFromFavorites(movie.id);
+    else addToFavorites(movie);
+  }
+
+  function onWatchClick(e) {
+    e.preventDefault();
+    window.open(`https://vidsrc.xyz/embed/movie/${movie.id}`, "_blank");
   }
 
   return (
@@ -13,8 +24,14 @@ function Moviecard({ movie }) {
           alt={movie.title}
         />
         <div className="movie-overlay">
-          <button className="favorite-btn" onClick={onFavClick}>
+          <button
+            className={`favorite-btn ${favorite ? "active" : ""}`}
+            onClick={onFavClick}
+          >
             ♥
+          </button>
+          <button className="watch-btn" onClick={onWatchClick}>
+            Watch
           </button>
         </div>
       </div>
