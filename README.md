@@ -8,7 +8,7 @@ Cinemaker is a React + Vite-based web application that allows users to explore t
 
 2. Favorite Movies: Add your favorite movies to a personalized favorites list.
 
-3.Watch Movies: Stream movies directly using VidSrc.
+3. Watch Movies: Stream movies directly using VidSrc.
 
 # Tech Stack 💻
 1. Frontend: React + Vite
