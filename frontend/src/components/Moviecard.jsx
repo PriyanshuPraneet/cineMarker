@@ -2,7 +2,8 @@ import "../css/Moviecard.css";
 import { useMovieContext } from "../context/MovieContext";
 
 function Moviecard({ movie }) {
-  const { addToFavorites, isFavorite, removeFromFavorites } = useMovieContext();
+  const { addToFavorites, isFavorite, removeFromFavorites, setSelectedMovie } =
+    useMovieContext();
   const favorite = isFavorite(movie.id);
 
   function onFavClick(e) {
@@ -13,7 +14,7 @@ function Moviecard({ movie }) {
 
   function onWatchClick(e) {
     e.preventDefault();
-    window.open(`https://vidsrc.xyz/embed/movie/${movie.id}`, "_blank");
+    setSelectedMovie(movie);
   }
 
   return (

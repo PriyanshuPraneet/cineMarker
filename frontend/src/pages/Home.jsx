@@ -1,6 +1,8 @@
 import Moviecard from "../components/Moviecard";
+import Vediocard from "../components/Vediocard";
 import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../services/api";
+import { useMovieContext } from "../context/MovieContext";
 import "../css/Home.css";
 
 function Home() {
@@ -8,6 +10,7 @@ function Home() {
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { selectedMovie, setSelectedMovie } = useMovieContext();
 
   useEffect(() => {
     const loadPopularMovies = async () => {
@@ -45,6 +48,10 @@ function Home() {
     setSearchQuery("");
   };
 
+  const handleCloseVideo = () => {
+    setSelectedMovie(null);
+  };
+
   return (
     <div className="home">
       <form className="search-form" onSubmit={searchMovie}>
@@ -68,6 +75,9 @@ function Home() {
             <Moviecard key={movie.id} movie={movie} />
           ))}
         </div>
+      )}
+      {selectedMovie && (
+        <Vediocard movie={selectedMovie} onClose={handleCloseVideo} />
       )}
     </div>
   );
