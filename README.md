@@ -2,7 +2,7 @@
 
 Cinemaker is a React + Vite-based web application that allows users to explore trending movies, add their favorite movies to a list, and watch them seamlessly. This project leverages the TMDB API to fetch movie data and VidSrc to stream movies.
 
-Visit the website: [link to site](https://cine-deploy.vercel.app/)
+Visit the website: [link to site](https://cine-marker.vercel.app/)
 
 # Features 🚀
 
