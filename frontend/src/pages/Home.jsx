@@ -10,12 +10,22 @@ function Home() {
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [count, setCount] = useState(1);
   const { selectedMovie, setSelectedMovie } = useMovieContext();
+
+  const nextButtonClick = () => {
+    setCount(count + 1);
+  };
+
+  const prevButtonClick = () => {
+    if (count == 1) setCount(1);
+    else setCount(count - 1);
+  };
 
   useEffect(() => {
     const loadPopularMovies = async () => {
       try {
-        const popularMovie = await getPopularMovies();
+        const popularMovie = await getPopularMovies(count);
         setMovie(popularMovie);
       } catch (err) {
         setError("Failed to load data");
@@ -27,6 +37,22 @@ function Home() {
 
     loadPopularMovies();
   }, []);
+
+  useEffect(() => {
+    const loadNewPage = async () => {
+      try {
+        const popularMovie = await getPopularMovies(count);
+        setMovie(popularMovie);
+      } catch (err) {
+        setError("Failed to load data");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadNewPage();
+  }, [count]);
 
   const searchMovie = async (e) => {
     e.preventDefault();
@@ -79,6 +105,12 @@ function Home() {
       {selectedMovie && (
         <Vediocard movie={selectedMovie} onClose={handleCloseVideo} />
       )}
+      <button className="prevButton" onClick={prevButtonClick}>
+        prev
+      </button>
+      <button className="nextButton" onClick={nextButtonClick}>
+        next
+      </button>
     </div>
   );
 }

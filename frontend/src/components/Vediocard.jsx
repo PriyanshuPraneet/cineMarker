@@ -24,7 +24,7 @@ const Vediocard = ({ movie, onClose }) => {
     <div className="video-card">
       <div className="video-container">
         <iframe
-          src={`https://flicky.host/embed/movie/?id=${movie.id}`}
+          src={`https://vidsrc.me/embed/movie?tmdb=${movie.id}`}
           allowFullScreen
           title={movie.title}
         ></iframe>

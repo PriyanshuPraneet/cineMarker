@@ -60,3 +60,44 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+/* ButtonStyles.css */
+
+/* Initial state for the buttons */
+.prevButton,
+.nextButton {
+  background-color: white; /* White background */
+  border: 2px solid transparent; /* No initial border */
+  color: #333; /* Dark text */
+  padding: 15px 32px; /* Padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  position: absolute; /* Fixed position */
+  bottom: 20px; /* Position at the bottom */
+  opacity: 0.3; /* Initially faded */
+  transition: opacity 0.3s ease, border 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.prevButton {
+  left: 50px; /* Close to the left window */
+}
+
+.nextButton {
+  right: 50px; /* Close to the right window */
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  border: 2px solid blue; /* Blue border on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  opacity: 1; /* Fully visible on hover */
+}
+
+.prevButton:active,
+.nextButton:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
