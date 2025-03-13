@@ -13,6 +13,8 @@ Visit the website: [link to site](https://vitraga-assignment.vercel.app/)
 3. Favorite Movies: Add your favorite movies to a personalized Wishlist(Persistent via local storage).
 
 4. Responsive UI: Toggle between darkMode and LightMode seamlessly. Navigate between pages efficiently
+   
+5. Watch Movies: Watch your favorite movie seamlessly. 
 
 # Tech Stack 💻
 1. Frontend: React + Vite
@@ -20,8 +22,9 @@ Visit the website: [link to site](https://vitraga-assignment.vercel.app/)
 2. APIs:
 
     TMDB API for movie information
+    Vidsrc API for movie streaming
 
-3. Styling: TailwindCSS
+4. Styling: TailwindCSS
 
 # Installation and Setup 🛠️
 
