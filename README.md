@@ -1,6 +1,6 @@
-# VitragaMovieDB 🎥
+# CineMarker MovieDB 🎥
 
-VitragaMovieDB is a React + Vite-based web application that allows users to explore trending movies, add their favorite movies to a list. This project leverages the TMDB API to fetch movie data.
+CineMarker is a React + Vite-based web application that allows users to explore trending movies, add their favorite movies to a list. This project leverages the TMDB API to fetch movie data.
 
 Visit the website: [link to site](https://vitraga-assignment.vercel.app/)
 
