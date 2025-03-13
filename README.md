@@ -29,7 +29,7 @@ Visit the website: [link to site](https://vitraga-assignment.vercel.app/)
 
    ``` bash
    git clone <repository-url>
-   cd vitraga-assignment
+   cd cineMarker
 
    ```
 
