@@ -1,16 +1,18 @@
-# cineMarker 🎥
+# VitragaMovieDB 🎥
 
-Cinemaker is a React + Vite-based web application that allows users to explore trending movies, add their favorite movies to a list, and watch them seamlessly. This project leverages the TMDB API to fetch movie data and VidSrc to stream movies.
+VitragaMovieDB is a React + Vite-based web application that allows users to explore trending movies, add their favorite movies to a list. This project leverages the TMDB API to fetch movie data.
 
-Visit the website: [link to site](https://cine-marker.vercel.app/)
+Visit the website: [link to site](https://vitraga-assignment.vercel.app/)
 
 # Features 🚀
 
-1. Trending Movies: Displays the latest trending movies on the homepage.
+1. Movies: Displays the latest trending, upcoming and top rated movies on the homepage. Explore the details of the movie(via Dynamic Routing)
 
-2. Favorite Movies: Add your favorite movies to a personalized favorites list.
+2. Search Movies: Search your favorite movie
 
-3. Watch Movies: Stream movies directly using VidSrc.
+3. Favorite Movies: Add your favorite movies to a personalized Wishlist(Persistent via local storage).
+
+4. Responsive UI: Toggle between darkMode and LightMode seamlessly. Navigate between pages efficiently
 
 # Tech Stack 💻
 1. Frontend: React + Vite
@@ -19,9 +21,7 @@ Visit the website: [link to site](https://cine-marker.vercel.app/)
 
     TMDB API for movie information
 
-    VidSrc for movie streaming
-
-3. Styling: CSS
+3. Styling: TailwindCSS
 
 # Installation and Setup 🛠️
 
@@ -29,7 +29,7 @@ Visit the website: [link to site](https://cine-marker.vercel.app/)
 
    ``` bash
    git clone <repository-url>
-   cd cinemaker
+   cd vitraga-assignment
 
    ```
 
@@ -50,11 +50,14 @@ Visit the website: [link to site](https://cine-marker.vercel.app/)
    ```
 
 # Usage 📖
-1. Trending Movies:
-  Browse the homepage to see the latest trending movies fetched from TMDB.
+1. Movies:
+  Browse the homepage to see the latest trending, popular and top rated movies fetched from TMDB.
 
-2. Add to Favorites:
-  Click the "Add to Favorites" button to save movies for quick access later.
+2. Add to WishList:
+  Click the "Add to WishList" button to save movies for quick access later.
 
-3. Watch Movies:
-   Click the "Watch" button on a movie card to stream it using VidSrc.
+3. Movie Details:
+   Click on the moviecard to see the details of the movie.
+
+4. Responsive Theme:
+   Change the theme of the website by toggling between lightmode and darkmode.
